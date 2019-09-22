@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Quotes } from '../quotes';
 import { from } from 'rxjs';
 
@@ -9,6 +9,12 @@ import { from } from 'rxjs';
 })
 export class QuotesFormComponent implements OnInit {
   newQuote = new Quotes ("", "","");
+
+  @Output() addQuote = new EventEmitter<Quotes>();
+
+  submitGoal(){
+    this.addQuote.emit(this.newQuote);
+  }
 
   constructor() { }
 
