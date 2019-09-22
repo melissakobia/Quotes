@@ -21,7 +21,11 @@ export class QuotesDetailsComponent implements OnInit {
      this.dislike = this.dislike + 1;
    }
 
-   
+   @Output() isDelete = new EventEmitter<boolean>();
+
+  quoteDelete(complete:boolean){
+    this.isDelete.emit(complete);
+  }
   
 
   constructor() { }
