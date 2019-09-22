@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input , Output, EventEmitter} from '@angular/core';
 import { Quotes } from 'src/app/quotes';
 import { from } from 'rxjs';
 
@@ -9,7 +9,20 @@ import { from } from 'rxjs';
 })
 export class QuotesDetailsComponent implements OnInit {
 
+  like = 0;
+  dislike = 0;
+
   @Input() quote: Quotes;
+
+  likeFunction() {
+    this.like = this.like + 1;
+   }
+   dislikeFunction() {
+     this.dislike = this.dislike + 1;
+   }
+
+   
+  
 
   constructor() { }
 
