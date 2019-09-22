@@ -4,13 +4,30 @@
   </div>
 
   <div class="container">
-    <div class="card" *ngFor = 'let quote of quotes; let i = index'>
+
+
+
+
+    <app-quotes-form (addQuote)='addNewQuote($event)'></app-quotes-form>
+
+
+
+  </div>
+
+
+
+  <div class="container">
+    <div class="card" *ngFor='let quote of quotes; let i = index'>
       <div class="card-header" (click)='toggleDetails(i)'>
-        {{quote.quoteActual}}
+        <span>{{quote.quoteActual}}</span>
       </div>
-      <app-quotes-details *ngIf='quote.showDescription'></app-quotes-details>
-      
+      <div class="card-body" *ngIf='quote.showDescription'>
+        <app-quotes-details [quote]='quote' (isDelete) = 'deleteQuote($event,i)'></app-quotes-details>
+      </div>
+
+
     </div>
+    <hr>
 
   </div>
 
