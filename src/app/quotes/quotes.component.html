@@ -1,0 +1,19 @@
+<div class="container">
+  <div id="heading">
+    <h3 id="quotes">Quotes</h3>
+  </div>
+
+  <div class="container">
+    <div class="card" *ngFor = 'let quote of quotes; let i = index'>
+      <div class="card-header" (click)='toggleDetails(i)'>
+        {{quote.quoteActual}}
+      </div>
+      <app-quotes-details *ngIf='quote.showDescription'></app-quotes-details>
+      
+    </div>
+
+  </div>
+
+
+
+</div>
