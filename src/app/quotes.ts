@@ -1,4 +1,6 @@
 export class Quotes {
+  showDescription : boolean;
+  
 
   constructor(
     public quote :string,
@@ -6,6 +8,7 @@ export class Quotes {
     public name : string,
     
   ){
+    this.showDescription = false;
 
   }
 }
