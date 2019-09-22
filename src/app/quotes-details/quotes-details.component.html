@@ -1,9 +1,10 @@
-<div class="card-body">
-  <blockquote class="blockquote mb-0">
-    <footer class="blockquote-footer">Author: <cite >{{quote.author}}</cite> </footer> 
-  </blockquote>
-  <p>Added By : {{quote.name}}</p>
-</div>
+<blockquote class="blockquote mb-0">
+  <footer class="blockquote-footer">Author: {{quote.author}} </footer>
+</blockquote>
+<p>Added By : {{quote.name}}</p>
+
+<button type="button" (click)= 'quoteDelete(true)' class="btn btn-danger" name="button"><i
+    class="glyphicon glyphicon-trash "></i>DELETE</button>
 <div class="card-footer text-muted">
-  2 days ago
+  <p>Published 2 days ago</p>
 </div>
