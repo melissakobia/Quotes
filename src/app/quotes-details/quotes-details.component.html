@@ -2,7 +2,10 @@
   <footer class="blockquote-footer">Author: {{quote.author}} </footer>
 </blockquote>
 <p>Added By : {{quote.name}}</p>
-
+<button class="btn btn-info" type="button" (click)="likeFunction()"><i class="fas fa-thumbs-up"></i> ThumbsUp {{like}}
+</button>
+<button class="btn btn-primary" type="button" (click)="dislikeFunction()"><i class="fas fa-thumbs-down"></i> ThumbsDown {{dislike}}
+</button>
 <button type="button" (click)= 'quoteDelete(true)' class="btn btn-danger" name="button"><i
     class="glyphicon glyphicon-trash "></i>DELETE</button>
 <div class="card-footer text-muted">
