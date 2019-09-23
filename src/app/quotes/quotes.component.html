@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-          <div class="card border-danger bg-transparent" *ngFor='let quote of quotes; let i = index'>
+          <div appAppHighlight class="card border-danger bg-transparent" *ngFor='let quote of quotes; let i = index'>
             <h4 id="quote" class="card-title" (click)='toggleDetails(i)'>{{quote.quoteActual}}</h4>
 
             <div class="card-body text-pink" *ngIf='quote.showDescription'>
