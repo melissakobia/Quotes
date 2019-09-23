@@ -23,7 +23,7 @@ As a user of the application you will be able to:
 
 ### Installing
 
-*** To view the app.Visit ->  
+*** To view the app.Visit ->  https://melissakobia.github.io/Quotes/
 * Step 1:
 Clone this repo: git clone https://github.com/melissakobia/Quotes.git
 
