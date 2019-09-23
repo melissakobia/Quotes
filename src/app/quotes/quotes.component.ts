@@ -11,7 +11,8 @@ import { Quotes } from 'src/app/quotes';
 export class QuotesComponent implements OnInit {
 
   quotes:Quotes [] = [
-   new Quotes (1,'In this article we will learn how to create user-friendly (human readable) date pipe in Angular.','Iana dskjf','am happy', new Date(2019,6,9)),
+   new Quotes (1,'Dont cry because its over, smile because it happened.','Dr. Seuss','Melissa', new Date(2019,6,9)),
+   new Quotes (1,'Im selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you cant handle me at my worst, then you sure as hell dont deserve me at my best.','Marilyn Monroe','Melissa', new Date(2019,6,9)),
   ];
 
   addNewQuote(quote) {

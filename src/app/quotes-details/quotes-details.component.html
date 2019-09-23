@@ -1,15 +1,16 @@
 <blockquote class="blockquote mb-0">
-  <footer class="blockquote-footer" style="color:darkslategrey; font: size 25px;">Author: {{quote.author}} </footer>
+  <footer class="blockquote-footer" style="color:black; font: size 25px; font-weight: bold">Author: {{quote.author}}
+  </footer>
 </blockquote>
 <p id="addedBy">Added By : {{quote.name}}</p>
 <button class="btn btn-info" type="button" (click)="likeFunction()"><i class="fa fa-thumbs-up"></i> {{like}}
 </button>
-<button class="btn btn-primary" type="button" (click)="dislikeFunction()"><i class="fa fa-thumbs-down"></i> 
+<button class="btn btn-primary" type="button" (click)="dislikeFunction()"><i class="fa fa-thumbs-down"></i>
   {{dislike}}
 </button>
 <button type="button" (click)='quoteDelete(true)' class="btn btn-danger" name="button"><i
     class="fa fa-trash "></i>DELETE</button>
-    
+
 <hr>
 
-<p class="text-muted">Posted {{quote.countDate | dateCount}}</p>
+<p style="color: black; font-weight: bold">Posted {{quote.countDate | dateCount}}</p>
