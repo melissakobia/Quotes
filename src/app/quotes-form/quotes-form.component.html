@@ -1,36 +1,20 @@
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-<!-- Material Design Bootstrap -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css">
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
-
-
-
 <!-- Grid row -->
+<div id="heading" class="container">
+  <h1>THE GREAT QUOTES</h1>
+
+</div>
+
 <div class="row">
-  <div class="col-md-6">
-    
-
-      <h1 class="intro">INSPIRATIONAL QUOTES</h1>
-      <h2>hghj</h2>
-      <br>
-      <br>
-      <p class="intro">Add a paragragh</p>
-
-
-
-   
-  </div>
+  
 
   <div class="col-md-6 mb-4">
     <div id="formCard" class="card" style="padding-top: 10%">
       <div class="card-body">
 
-        <form #quoteForm='ngForm'>
-          <h2 class="text-center py-4 font-bold font-up danger-text">Add a Quote</h2>
+        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+          <h2 class="text-center py-4 font-bold font-up pink-text">Add a Quote</h2>
           <div class="md-form">
-            <i class="fa fa-user prefix grey-text"></i>
+            <i class="fa fa-user prefix pink-text"></i>
             <label for="Name">Your name</label><br>
             <input type="text" id="name" [(ngModel)]='newQuote.name' #name='ngModel' class="form-control" name="name">
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
@@ -38,32 +22,46 @@
             </div>
 
           </div>
+
           <div class="md-form">
 
-            <i class="fa fa-pencil prefix grey-text"></i>
+            <i class="fa fa-pencil prefix pink-text"></i>
             <label for="Quote">Your Quote</label><br>
-            <textarea type="text" id="quote" [(ngModel)]='newQuote.quote' class="md-textarea" rows="5"
-              name="quote" #quote='ngModel' required></textarea>
+            <textarea type="text" id="quoteActual" [(ngModel)]='newQuote.quoteActual' class="md-textarea" rows="5"
+              name="quoteActual" #quoteActual='ngModel' required></textarea>
 
-            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+            <div [hidden]="quoteActual.valid || quoteActual.pristine" class="alert alert-danger">
               <p>Quote is required</p>
             </div>
 
           </div>
 
           <div class="md-form">
-            <i class="fa fa-tag prefix grey-text"></i>
+            <i class="fa fa-tag prefix pink-text"></i>
             <label for="Author">Author</label><br>
-            <input type="text" id="author" [(ngModel)]='newQuote.author'  class="form-control"
-              name="author" #author='ngModel' required>
+            <input type="text" id="author" [(ngModel)]='newQuote.author' class="form-control" name="author"
+              #author='ngModel' required>
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
               <p>Author is required</p>
             </div>
 
           </div>
 
+          <div class="md-form">
+            <i class="fa fa-calendar prefix pink-text"></i>
+
+            <label for="date">Date</label>
+            <br>
+            <br>
+            <input type='date' id="countDate" [(ngModel)]="newQuote.countDate" name="countDate" #countDate="ngModel"
+              required>
+            <div [hidden]="countDate.valid || countDate.pristine" class="alert alert-danger">
+              <p>Date is required</p>
+            </div>
+          </div>
+
           <div class="text-center">
-            <button class="btn btn-outline-danger btn-lg">SUBMIT</button>
+            <button type="submit" class="btn btn-outline-danger btn-lg">SUBMIT</button>
           </div>
         </form>
 

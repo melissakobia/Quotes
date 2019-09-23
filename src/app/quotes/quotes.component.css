@@ -1,0 +1,23 @@
+#main {
+  background-image: url(/assets/images/baeutiful-beach.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: fit-content;
+  
+}
+
+#quotes {
+  color: whitesmoke;
+  font-family: 'Fredoka One', cursive;
+  font-size: 40px;
+}
+#heading {
+  text-align: center;
+  padding: 5%;
+}
+#quote {
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  color: black
+}

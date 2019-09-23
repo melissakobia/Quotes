@@ -1,36 +1,44 @@
-<div class="container">
-  <div id="heading">
-    <h3 id="quotes">Quotes</h3>
-  </div>
-
+<div id="main">
   <div class="container">
-
-
-
-
     <app-quotes-form (addQuote)='addNewQuote($event)'></app-quotes-form>
 
 
-
   </div>
-
-
 
   <div class="container">
-    <div class="card" *ngFor='let quote of quotes; let i = index'>
-      <div class="card-header" (click)='toggleDetails(i)'>
-        <span>{{quote.quoteActual}}</span>
-      </div>
-      <div class="card-body" *ngIf='quote.showDescription'>
-        <app-quotes-details [quote]='quote' (isDelete) = 'deleteQuote($event,i)'></app-quotes-details>
+    <div id="heading">
+      <h1 id="quotes">Quotes</h1>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="card border-danger bg-transparent" *ngFor='let quote of quotes; let i = index'>
+            <h4 id="quote" class="card-title" (click)='toggleDetails(i)'>{{quote.quoteActual}}</h4>
+
+            <div class="card-body text-pink" *ngIf='quote.showDescription'>
+              <app-quotes-details [quote]='quote' (isDelete)='deleteQuote($event,i)'></app-quotes-details>
+            </div>
+
+
+          </div>
+
+        </div>
+        <div class="col-md-2">
+
+        </div>
       </div>
 
+
+
+
+      <hr>
 
     </div>
-    <hr>
+
+
 
   </div>
-
-
 
 </div>

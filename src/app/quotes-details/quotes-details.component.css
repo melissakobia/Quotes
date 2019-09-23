@@ -1,0 +1,13 @@
+.btn {
+  text-align: center;
+}
+
+#quote {
+  font-family: 'Lobster', cursive;
+  
+}
+#addedBy {
+  color: black;
+  font-family: 'Neuton', serif;
+  font-size: 20px;
+}
